@@ -23,13 +23,13 @@ def init_logging():
 
 
 def sigterm_handler(_signo, _stack_frame):
-    # Raises SystemExit(0):
     sys.exit(0)
 
 
 def main():
     """ Точка входа """
 
+    # Корректно обрабатываем сигнал SIGTERM
     signal.signal(signal.SIGTERM, sigterm_handler)
 
     # Настраиваем логирование
