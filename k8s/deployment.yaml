@@ -19,18 +19,18 @@ spec:
             - name: web
               containerPort: 80
 
-#          livenessProbe:
-#            httpGet:
-#              port: 80
-#              path: /
-#            initialDelaySeconds: 10
-#            periodSeconds: 5
-#            timeoutSeconds: 2
-#
-#          readinessProbe:
-#            httpGet:
-#              port: 80
-#              path: /health
-#            initialDelaySeconds: 10
-#            periodSeconds: 5
-#            timeoutSeconds: 2
+          livenessProbe:
+            httpGet:
+              port: 80
+              path: /version
+            initialDelaySeconds: 10
+            periodSeconds: 5
+            timeoutSeconds: 2
+
+          readinessProbe:
+            httpGet:
+              port: 80
+              path: /health
+            initialDelaySeconds: 10
+            periodSeconds: 5
+            timeoutSeconds: 2
