@@ -11,8 +11,8 @@ COPY ./requirements.txt ./app/
 
 RUN update-ca-certificates && \
     apk update && \
-    apk add curl jq librdkafka && \
-    apk add --virtual build-deps gcc python3-dev musl-dev librdkafka-dev
+    apk add curl jq && \
+    apk add --virtual build-deps gcc python3-dev musl-dev
 
 RUN pip install --upgrade pip \
  && pip install -r ./app/requirements.txt
