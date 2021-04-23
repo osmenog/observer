@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: observer
+spec:
+  containers:
+    - name: observer
+      image: osmenogg/observer:v1
+      ports:
+        - name: web
+          containerPort: 80
